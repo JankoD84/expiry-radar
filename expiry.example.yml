@@ -1,0 +1,10 @@
+defaults:
+  warn_days: [30, 14, 7, 1]
+  owner: "@platform"
+items:
+  - {type: tls, host: api.example.com, owner: "@backend", runbook: "https://wiki.example.com/runbooks/certificate-expired"}
+  - {type: tls, host: example.com}
+  - {type: domain, name: example.com, owner: "@founder"}
+  - {type: github-token, token_env: RELEASE_PAT, name: "CI release token"}
+  - {type: manual, name: "Stripe restricted key (webhooks)", expires: 2027-03-01, owner: "@payments", kind: api-key}
+  - {type: manual, name: "Apple Push certificate", expires: 2027-01-15, kind: certificate}
